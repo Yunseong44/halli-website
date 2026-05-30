@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, AlertCircle } from "lucide-react";
+import { Download } from "lucide-react";
 import { Link } from "wouter";
 
 export default function DownloadPage() {
@@ -93,28 +93,6 @@ export default function DownloadPage() {
               </div>
             </Card>
           </div>
-
-          {/* 주의사항 */}
-          <Card className="bg-card border-border p-6 mt-12">
-            <div className="flex gap-4">
-              <AlertCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">필수 요구사항</h3>
-                <p className="text-muted-foreground mb-4">
-                  Halli는 다음 LLM API 중 하나를 사용합니다:
-                </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                  <li>Google Gemini API</li>
-                  <li>OpenAI GPT API</li>
-                  <li>Anthropic Claude API</li>
-                  <li>DeepSeek API</li>
-                </ul>
-                <p className="text-muted-foreground mt-4">
-                  너의 API 키로 동작합니다. 대화·기억은 너의 PC에만 저장됩니다.
-                </p>
-              </div>
-            </div>
-          </Card>
 
           {/* 베타 신청 */}
           <div className="mt-12 p-8 bg-secondary rounded-lg text-center">
