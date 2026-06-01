@@ -6,104 +6,100 @@ import { Link } from "wouter";
 export default function DownloadPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* 헤더 */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="container flex items-center justify-between py-4">
           <Link href="/">
-            <span className="text-lg font-bold text-foreground cursor-pointer">Halli</span>
+            <span className="cursor-pointer text-lg font-bold text-foreground">Halli</span>
           </Link>
-          <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/" className="text-muted-foreground transition-colors hover:text-foreground">
             돌아가기
           </Link>
         </div>
       </header>
 
       <div className="container py-16 md:py-24">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
             Halli 다운로드
           </h1>
-          <p className="text-lg text-muted-foreground mb-12">
-            너의 PC에서 동작하는 개인용 AI 도구입니다.
+          <p className="mb-12 text-lg text-muted-foreground">
+            내 PC에서 조용히 동작하는 개인형 AI 도구입니다.
           </p>
 
           <div className="space-y-6">
-            {/* Windows */}
-            <Card className="bg-card border-border p-6">
-              <div className="flex items-start justify-between">
+            <Card className="border-border bg-card p-6">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Windows</h3>
+                  <h3 className="mb-2 text-xl font-semibold text-foreground">Windows</h3>
                   <p className="text-muted-foreground">Windows 10 이상</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    시스템 요구사항: 4GB RAM, 200MB 저장공간
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    버전 0.1.1 설치 파일을 내려받은 뒤 더블 클릭해서 설치해 주세요.
+                    파일 크기는 약 100MB입니다.
                   </p>
                 </div>
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
                   asChild
                 >
-                  <a href="https://github.com/Yunseong44/Yunseong-Industry/releases/download/halli-v0.1.0-beta/Halli-Windows.zip">
-                    <Download className="w-4 h-4 mr-2" />
-                    다운로드
+                  <a href="https://github.com/Yunseong44/Yunseong-Industry/releases/download/halli-v0.1.1-beta/Halli-Setup-0.1.1.exe">
+                    <Download className="mr-2 h-4 w-4" />
+                    0.1.1 설치 파일 받기
                   </a>
                 </Button>
               </div>
             </Card>
 
-            {/* macOS */}
-            <Card className="bg-card border-border p-6">
-              <div className="flex items-start justify-between">
+            <Card className="border-border bg-card p-6">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">macOS</h3>
+                  <h3 className="mb-2 text-xl font-semibold text-foreground">macOS</h3>
                   <p className="text-muted-foreground">macOS 11 이상</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    시스템 요구사항: 4GB RAM, 200MB 저장공간
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    macOS용 설치 파일은 준비 중입니다.
                   </p>
                 </div>
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
                   disabled
                 >
-                  <Download className="w-4 h-4 mr-2" />
+                  <Download className="mr-2 h-4 w-4" />
                   준비 중
                 </Button>
               </div>
             </Card>
 
-            {/* Linux */}
-            <Card className="bg-card border-border p-6">
-              <div className="flex items-start justify-between">
+            <Card className="border-border bg-card p-6">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Linux</h3>
+                  <h3 className="mb-2 text-xl font-semibold text-foreground">Linux</h3>
                   <p className="text-muted-foreground">Ubuntu 20.04 이상</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    시스템 요구사항: 4GB RAM, 200MB 저장공간
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Linux용 설치 파일은 준비 중입니다.
                   </p>
                 </div>
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
                   disabled
                 >
-                  <Download className="w-4 h-4 mr-2" />
+                  <Download className="mr-2 h-4 w-4" />
                   준비 중
                 </Button>
               </div>
             </Card>
           </div>
 
-          {/* 베타 신청 */}
-          <div className="mt-12 p-8 bg-secondary rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              아직 다운로드할 준비가 안 되셨나요?
+          <div className="mt-12 rounded-lg bg-secondary p-8 text-center">
+            <h3 className="mb-4 text-2xl font-bold text-foreground">
+              아직 다운로드가 열리지 않았나요?
             </h3>
-            <p className="text-muted-foreground mb-6">
-              베타 신청을 통해 출시 소식을 받으세요.
+            <p className="mb-6 text-muted-foreground">
+              베타 신청을 남겨 주시면 출시 소식을 차분히 전해드릴게요.
             </p>
             <Link href="/beta">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 베타 신청하기
               </Button>
             </Link>
