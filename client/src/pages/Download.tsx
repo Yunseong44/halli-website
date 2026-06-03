@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Download } from "lucide-react";
 import { Link } from "wouter";
@@ -33,7 +33,7 @@ export default function DownloadPage() {
                   <h3 className="mb-2 text-xl font-semibold text-foreground">Windows</h3>
                   <p className="text-muted-foreground">Windows 10 이상</p>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    버전 0.1.2 설치 파일을 내려받은 뒤 더블 클릭해서 설치해 주세요.
+                    버전 0.1.3 설치 파일을 내려받은 뒤 더블 클릭해서 설치해 주세요.
                     파일 크기는 약 100MB입니다.
                   </p>
                 </div>
@@ -42,9 +42,9 @@ export default function DownloadPage() {
                   className="bg-primary text-primary-foreground hover:bg-primary/90"
                   asChild
                 >
-                  <a href="https://github.com/Yunseong44/Yunseong-Industry/releases/download/halli-v0.1.2-beta/Halli-Setup-0.1.2.exe">
+                  <a href="https://github.com/Yunseong44/Yunseong-Industry/releases/download/halli-v0.1.3-beta/Halli-Setup-0.1.3.exe">
                     <Download className="mr-2 h-4 w-4" />
-                    0.1.2 설치 파일 받기
+                    0.1.3 설치 파일 받기
                   </a>
                 </Button>
               </div>
@@ -109,3 +109,4 @@ export default function DownloadPage() {
     </div>
   );
 }
+
